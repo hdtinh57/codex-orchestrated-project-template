@@ -1,6 +1,6 @@
 ﻿# Codex Development Template
 
-![Codex Development Template](.assets/cover.png)
+![Codex Development Template](./.assets/cover.png)
 
 A bootstrapping template for software projects built with [Codex](https://openai.com/codex/). Use it as a GitHub template, run **`start`**, and Codex walks you through setting up all the documentation before a single line of code is written.
 
@@ -13,8 +13,8 @@ This template is also a **Codex plugin** - domain knowledge is encoded as invoka
 To make the domain skills available globally in Codex:
 
 ```bash
-git clone https://github.com/josipjelic/orchestrated-project-template
-ln -sf "$(pwd)/orchestrated-project-template/.codex" ~/.codex/plugins/orchestrated-template
+git clone https://github.com/hdtinh57/codex-orchestrated-project-template
+ln -sf "$(pwd)/codex-orchestrated-project-template/.codex" ~/.codex/plugins/codex-orchestrated-project-template
 ```
 
 That's it. The eleven domain skills (`frontend`, `backend`, `database`, `mobile`, `design`, `content`, `quality`, `docs`, `cicd`, `docker`, `planning`) will appear in your Codex skill list immediately.
@@ -22,7 +22,7 @@ That's it. The eleven domain skills (`frontend`, `backend`, `database`, `mobile`
 To update:
 
 ```bash
-cd orchestrated-project-template && git pull
+cd codex-orchestrated-project-template && git pull
 ```
 
 The symlink means you always run from the latest version.
@@ -38,7 +38,7 @@ Click **"Use this template"** -> **"Create a new repository"** on GitHub.
 Or with the GitHub CLI:
 
 ```bash
-gh repo create my-project --template https://github.com/josipjelic/orchestrated-project-template --private --clone && cd my-project
+gh repo create my-project --template https://github.com/hdtinh57/codex-orchestrated-project-template --private --clone && cd my-project
 ```
 
 ### 2. Authenticate the GitHub CLI (optional)
@@ -128,7 +128,7 @@ Eleven skills encoding domain craft - invokable in any session once the plugin i
 | `design` | Design decision framework, visual hierarchy, cognitive load principles, assets discovery protocol |
 | `content` | AIDA/PAS/FAB frameworks, brand voice, keyword intent, on-page SEO checklist, JSON-LD templates |
 | `quality` | Test pyramid strategy, Playwright fixtures, flakiness prevention, accessibility testing, CI optimisation |
-| `docs` | DiÃ¡taxis framework, conciseness discipline, USER_GUIDE structure, changelog format |
+| `docs` | Diataxis framework, conciseness discipline, USER_GUIDE structure, changelog format |
 | `cicd` | Pipeline design, security scanning, release automation, deployment strategies, reusable workflows |
 | `docker` | Multi-stage builds, BuildKit cache mounts, security hardening, docker-compose standards |
 
@@ -137,60 +137,56 @@ Eleven skills encoding domain craft - invokable in any session once the plugin i
 ## What's Inside
 
 ```
-â”œâ”€â”€ AGENTS.md                     # Master Codex instructions (auto-loaded every session)
-â”œâ”€â”€ PRD.md                        # Product Requirements Document - agents read, never modify
-â”œâ”€â”€ TODO.md                       # Prioritized backlog - humans curate, agents consult
-â”œâ”€â”€ START_HERE.md                 # Onboarding protocol - deleted after setup
-â”œâ”€â”€ .mcp.json                     # MCP server config (sequential-thinking, context7)
-â”‚
-â”œâ”€â”€ .codex/
-â”‚   â”œâ”€â”€ .codex-plugin/
-â”‚   â”‚   â””â”€â”€ plugin.json           # Plugin manifest - makes skills installable
-â”‚   â”œâ”€â”€ agents/                   # 5 consolidated agents
-â”‚   â”‚   â”œâ”€â”€ planner.md            # Backlog & architecture (Codex)
-â”‚   â”‚   â”œâ”€â”€ builder.md            # All application code (Codex)
-â”‚   â”‚   â”œâ”€â”€ designer.md           # UX & content (Codex)
-â”‚   â”‚   â”œâ”€â”€ quality.md            # Testing & documentation (Codex)
-â”‚   â”‚   â””â”€â”€ infra.md              # CI/CD & containers (Codex)
-â”‚   â”œâ”€â”€ skills/                   # 11 domain skills (SKILL.md per directory)
-â”‚   â”‚   â”œâ”€â”€ planning/             # Project management & architecture craft
-â”‚   â”‚   â”œâ”€â”€ frontend/             # React/Next.js implementation patterns
-â”‚   â”‚   â”œâ”€â”€ backend/              # API & business logic patterns
-â”‚   â”‚   â”œâ”€â”€ database/             # Schema design & migration patterns
-â”‚   â”‚   â”œâ”€â”€ mobile/               # React Native & Expo patterns
-â”‚   â”‚   â”œâ”€â”€ design/               # UX design process & visual hierarchy
-â”‚   â”‚   â”œâ”€â”€ content/              # Copywriting frameworks & SEO
-â”‚   â”‚   â”œâ”€â”€ quality/              # Testing strategy & Playwright patterns
-â”‚   â”‚   â”œâ”€â”€ docs/                 # Documentation writing (DiÃ¡taxis)
-â”‚   â”‚   â”œâ”€â”€ cicd/                 # Pipeline design & release automation
-â”‚   â”‚   â””â”€â”€ docker/               # Container architecture & security
-â”‚   â”œâ”€â”€ prompts/
-â”‚   â”‚   â”œâ”€â”€ orchestrate.md        # orchestrate - multi-agent task execution
-â”‚   â”‚   â”œâ”€â”€ status.md             # status - live project health card
-â”‚   â”‚   â”œâ”€â”€ start.md              # start - onboarding protocol
-â”‚   â”‚   â””â”€â”€ sync-template.md      # sync-template - pull latest .codex/ from upstream
-â”‚   â”œâ”€â”€ rules/                    # File-scoped rules - injected when matching files are open
-â”‚   â”‚   â”œâ”€â”€ typescript.md         # *.ts, *.tsx - no any, strict null, explicit returns
-â”‚   â”‚   â”œâ”€â”€ migrations.md         # *.sql, migrations/** - reversible, naming convention
-â”‚   â”‚   â””â”€â”€ tests.md              # *.spec.ts, *.test.ts - POM, data-testid, no test.only
-â”‚   â”œâ”€â”€ hooks.json             # Lifecycle hook configuration
-â”‚   â””â”€â”€ templates/                # Blank doc templates - synced from upstream
-â”‚
-â”œâ”€â”€ .github/
-â”‚   â””â”€â”€ PULL_REQUEST_TEMPLATE.md
-â”‚
-â”œâ”€â”€ .tasks/                       # Detailed task files - one per TODO item
-â”‚
-â””â”€â”€ docs/                         # Created during onboarding from .codex/templates/
-    â”œâ”€â”€ user/USER_GUIDE.md
-    â”œâ”€â”€ technical/
-    â”‚   â”œâ”€â”€ ARCHITECTURE.md
-    â”‚   â”œâ”€â”€ DESIGN_SYSTEM.md
-    â”‚   â”œâ”€â”€ API.md
-    â”‚   â”œâ”€â”€ DATABASE.md
-    â”‚   â””â”€â”€ DECISIONS.md
-    â””â”€â”€ content/
-        â””â”€â”€ CONTENT_STRATEGY.md
+|-- AGENTS.md                          # Master Codex instructions (auto-loaded every session)
+|-- PRD.md                             # Product Requirements Document - agents read, never modify
+|-- TODO.md                            # Prioritized backlog - humans curate, agents consult
+|-- START_HERE.md                      # Onboarding protocol - deleted after setup
+|-- .mcp.json                          # MCP server config (sequential-thinking, context7)
+|-- .codex/
+|   |-- .codex-plugin/
+|   |   `-- plugin.json                # Plugin manifest - makes skills installable
+|   |-- agents/                        # 5 consolidated agents
+|   |   |-- planner.md                 # Backlog & architecture (Codex)
+|   |   |-- builder.md                 # All application code (Codex)
+|   |   |-- designer.md                # UX & content (Codex)
+|   |   |-- quality.md                 # Testing & documentation (Codex)
+|   |   `-- infra.md                   # CI/CD & containers (Codex)
+|   |-- skills/                        # 11 domain skills (SKILL.md per directory)
+|   |   |-- planning/                  # Project management & architecture craft
+|   |   |-- frontend/                  # React/Next.js implementation patterns
+|   |   |-- backend/                   # API & business logic patterns
+|   |   |-- database/                  # Schema design & migration patterns
+|   |   |-- mobile/                    # React Native & Expo patterns
+|   |   |-- design/                    # UX design process & visual hierarchy
+|   |   |-- content/                   # Copywriting frameworks & SEO
+|   |   |-- quality/                   # Testing strategy & Playwright patterns
+|   |   |-- docs/                      # Documentation writing (Diataxis)
+|   |   |-- cicd/                      # Pipeline design & release automation
+|   |   `-- docker/                    # Container architecture & security
+|   |-- prompts/
+|   |   |-- orchestrate.md             # orchestrate - multi-agent task execution
+|   |   |-- status.md                  # status - live project health card
+|   |   |-- start.md                   # start - onboarding protocol
+|   |   `-- sync-template.md           # sync-template - pull latest .codex/ from upstream
+|   |-- rules/                         # File-scoped rules - injected when matching files are open
+|   |   |-- typescript.md              # *.ts, *.tsx - no any, strict null, explicit returns
+|   |   |-- migrations.md              # *.sql, migrations/** - reversible, naming convention
+|   |   `-- tests.md                   # *.spec.ts, *.test.ts - POM, data-testid, no test.only
+|   |-- hooks.json                     # Lifecycle hook configuration
+|   `-- templates/                     # Blank doc templates - synced from upstream
+|-- .github/
+|   `-- PULL_REQUEST_TEMPLATE.md
+|-- .tasks/                            # Detailed task files - one per TODO item
+`-- docs/                              # Created during onboarding from .codex/templates/
+    |-- user/USER_GUIDE.md
+    |-- technical/
+    |   |-- ARCHITECTURE.md
+    |   |-- DESIGN_SYSTEM.md
+    |   |-- API.md
+    |   |-- DATABASE.md
+    |   `-- DECISIONS.md
+    `-- content/
+        `-- CONTENT_STRATEGY.md
 ```
 
 ---
@@ -232,4 +228,5 @@ fix/<ticket-id>-short-description
 ## License
 
 [MIT](LICENSE)
+
 
