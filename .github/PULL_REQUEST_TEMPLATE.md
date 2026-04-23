@@ -65,7 +65,7 @@ Closes #
 
 ## Pre-Merge Checklist
 
-- [ ] Code follows project conventions defined in `CLAUDE.md`
+- [ ] Code follows project conventions defined in `AGENTS.md`
 - [ ] Self-reviewed the full diff
 - [ ] No `console.log`, debug statements, or commented-out code left in
 - [ ] No hardcoded secrets, credentials, or environment-specific values

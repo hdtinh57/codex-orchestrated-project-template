@@ -48,7 +48,7 @@ Every TODO item must have a corresponding `.tasks/NNN-*.md` file. @project-manag
 - `frontend` → @frontend-developer
 - `backend` → @backend-developer
 - `database` → @database-expert
-- `design` → @ui-ux-designer
+- `design` → @designer
 - `qa` → @qa-engineer
 - `docs` → @documentation-writer
 - `infra` → @systems-architect

@@ -6,7 +6,7 @@
 
 ---
 
-## For Claude: Onboarding Protocol
+## For Codex: Onboarding Protocol
 
 When the user says **"START!"**, execute this onboarding sequence in full. Do not wait for further instructions — begin immediately. Do not skip phases or merge them.
 
@@ -58,26 +58,26 @@ Ask the user questions in conversational groups — 3 to 4 at a time. Wait for a
 
 #### 2.0 — Copy templates into place
 
-Before filling in any documentation, copy the blank templates from `.claude/templates/` to their project locations:
+Before filling in any documentation, copy the blank templates from `.codex/templates/` to their project locations:
 
 ```
-.claude/templates/docs/technical/ARCHITECTURE.md    →  docs/technical/ARCHITECTURE.md
-.claude/templates/docs/technical/DESIGN_SYSTEM.md   →  docs/technical/DESIGN_SYSTEM.md
-.claude/templates/docs/technical/DECISIONS.md     →  docs/technical/DECISIONS.md
-.claude/templates/docs/technical/API.md           →  docs/technical/API.md
-.claude/templates/docs/technical/DATABASE.md      →  docs/technical/DATABASE.md
-.claude/templates/docs/user/USER_GUIDE.md         →  docs/user/USER_GUIDE.md
-.claude/templates/docs/content/CONTENT_STRATEGY.md → docs/content/CONTENT_STRATEGY.md
-.claude/templates/README.md                       →  README.md  (the project README — replaces the template's own)
+.codex/templates/docs/technical/ARCHITECTURE.md    →  docs/technical/ARCHITECTURE.md
+.codex/templates/docs/technical/DESIGN_SYSTEM.md   →  docs/technical/DESIGN_SYSTEM.md
+.codex/templates/docs/technical/DECISIONS.md     →  docs/technical/DECISIONS.md
+.codex/templates/docs/technical/API.md           →  docs/technical/API.md
+.codex/templates/docs/technical/DATABASE.md      →  docs/technical/DATABASE.md
+.codex/templates/docs/user/USER_GUIDE.md         →  docs/user/USER_GUIDE.md
+.codex/templates/docs/content/CONTENT_STRATEGY.md → docs/content/CONTENT_STRATEGY.md
+.codex/templates/README.md                       →  README.md  (the project README — replaces the template's own)
 ```
 
-Create parent directories as needed. Do not modify the files inside `.claude/templates/` — they are the upstream originals.
+Create parent directories as needed. Do not modify the files inside `.codex/templates/` — they are the upstream originals.
 
-`CLAUDE.md` and `PRD.md` are already present at the project root and do not need copying.
+`AGENTS.md` and `PRD.md` are already present at the project root and do not need copying.
 
 Using the answers collected in Phase 1, update the following files in order. Replace every `[placeholder]` with real content. If the user doesn't know an answer yet, use `[TBD]` — never leave the original template placeholder text.
 
-**2.1 — `CLAUDE.md`**
+**2.1 — `AGENTS.md`**
 
 - Project name (heading and context paragraph)
 - 2–3 sentence project context description
@@ -87,7 +87,7 @@ Using the answers collected in Phase 1, update the following files in order. Rep
 - Environment commands: dev, build, test, lint, typecheck
 - Stack line in the header
 
-**2.2 — `README.md`** *(copied from `.claude/templates/README.template.md` in step 2.0)*
+**2.2 — `README.md`** *(copied from `.codex/templates/README.template.md` in step 2.0)*
 
 - Project name and one-sentence description
 - Overview paragraphs (what it does, who it's for, why it exists)
@@ -115,7 +115,7 @@ Using the answers collected in Phase 1, update the following files in order. Rep
 
 **2.4b — `docs/technical/DESIGN_SYSTEM.md`**
 
-- Leave token tables, component inventory, interaction patterns, and key user flows as templates — @ui-ux-designer fills these as the product UI evolves (parallel to how copy evolves in `CONTENT_STRATEGY.md`)
+- Leave token tables, component inventory, interaction patterns, and key user flows as templates — @designer fills these as the product UI evolves (parallel to how copy evolves in `CONTENT_STRATEGY.md`)
 
 **2.5 — `docs/technical/DECISIONS.md`**
 
@@ -131,12 +131,12 @@ Update the Decision Index table with the ADR-001 row.
 
 Using the answers from Group 5:
 - Overview and primary value proposition: the one sentence that all copy must reinforce
-- Brand Voice table: fill in the four voice dimensions (formality, energy, personality, authority) based on the tone the user described; if no tone was defined, leave as `[TBD — define with @copywriter-seo]`
+- Brand Voice table: fill in the four voice dimensions (formality, energy, personality, authority) based on the tone the user described; if no tone was defined, leave as `[TBD — define with @designer]`
 - Tone-by-context matrix: fill in the marketing headline and error message rows at minimum; leave others as `[TBD]`
 - Target personas: one entry per persona from PRD.md — summarise their job-to-be-done and biggest objection in copy terms
 - Keyword strategy: list any specific keywords the user mentioned; mark volume and difficulty as `[verify]`; leave the table otherwise populated with `[TBD]` rows
 - Canonical domain: fill in the primary domain and chosen www/non-www preference if known; otherwise `[TBD]`
-- Leave the Page Copy Library, CTA Library, and Redirect Map as blank templates — they will be filled in by @copywriter-seo as pages are written
+- Leave the Page Copy Library, CTA Library, and Redirect Map as blank templates — they will be filled in by @designer as pages are written
 
 ---
 
@@ -211,11 +211,11 @@ After completing all documentation and the initial backlog, present a structured
 [Name] — [one-sentence description]
 
 ### Documentation filled in
-- CLAUDE.md — stack, conventions, commands
+- AGENTS.md — stack, conventions, commands
 - README.md — overview, getting started, env vars
 - PRD.md — [X] functional requirements across [Y] feature areas, [Z] personas
 - ARCHITECTURE.md — tech stack and infrastructure
-- DESIGN_SYSTEM.md — design/UX templates in place (refined by @ui-ux-designer as UI ships)
+- DESIGN_SYSTEM.md — design/UX templates in place (refined by @designer as UI ships)
 - DECISIONS.md — ADR-001: [tech stack decision title]
 - CONTENT_STRATEGY.md — [brand voice / keyword targets filled in | marked N/A for internal tool]
 
@@ -255,9 +255,9 @@ Do not delete this file before the user says they're happy. "Looks good" or "yes
 Use this to verify everything is done before asking for confirmation in Phase 4.
 
 **Documentation**
-- [ ] Templates copied from `.claude/templates/` to `docs/` and `README.md` (step 2.0)
-- [ ] `CLAUDE.md` — all placeholders replaced, no `[square brackets]` remaining (or explicitly marked `[TBD]`)
-- [ ] `README.md` — all placeholders replaced (copied from `.claude/templates/README.md`)
+- [ ] Templates copied from `.codex/templates/` to `docs/` and `README.md` (step 2.0)
+- [ ] `AGENTS.md` — all placeholders replaced, no `[square brackets]` remaining (or explicitly marked `[TBD]`)
+- [ ] `README.md` — all placeholders replaced (copied from `.codex/templates/README.md`)
 - [ ] `PRD.md` — executive summary, personas, numbered FR-XXX requirements, NFRs, out of scope, open questions
 - [ ] `docs/technical/ARCHITECTURE.md` — tech stack table and infrastructure environments filled in
 - [ ] `docs/technical/DESIGN_SYSTEM.md` — copied from template (placeholder tables OK until design work begins)

@@ -46,7 +46,7 @@ Desktop.ini
 # IDE & editors
 .vscode/
 !.vscode/extensions.json
-!.vscode/settings.json.example
+!.vscode/hooks.json.example
 .idea/
 *.swp
 *.swo
@@ -68,3 +68,6 @@ Desktop.ini
 .cache/
 tmp/
 temp/
+
+# OMX runtime state
+.omx/

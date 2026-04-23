@@ -1,10 +1,10 @@
 # Product Requirements Document
 
 > [!WARNING]
-> **HUMAN APPROVAL REQUIRED TO EDIT**
+> **READ-ONLY FOR ALL AGENTS**
 > This document is the source of truth for what we are building.
 > Codex agents must READ this document to understand requirements.
-> **Do not edit, rewrite, or "update to reflect current state" unless the human has explicitly instructed you to do so in the current conversation.**
+> **Do not edit, rewrite, or "update to reflect current state" without explicit human instruction.**
 > When in doubt, leave it unchanged and ask the human.
 
 ---

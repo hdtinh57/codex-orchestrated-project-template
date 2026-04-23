@@ -1,0 +1,8 @@
+model = "codex"
+model_reasoning_effort = "high"
+
+[agents.subagent]
+model = "codex"
+
+[agents.team]
+model = "codex"

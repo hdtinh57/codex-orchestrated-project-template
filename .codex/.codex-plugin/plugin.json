@@ -1,0 +1,12 @@
+{
+  "name": "orchestrated-project-template",
+  "version": "1.0.0",
+  "description": "Codex skills and prompt packs for the orchestrated multi-agent project template",
+  "author": {
+    "name": "Josip Jelic",
+    "homepage": "https://github.com/josipjelic"
+  },
+  "skills": "./skills/",
+  "prompts": "./prompts/",
+  "keywords": ["codex", "agents", "orchestration", "template"]
+}

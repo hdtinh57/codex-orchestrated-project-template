@@ -20,7 +20,7 @@ One omnipotent AI trying to do everything produces mediocre everything. Twelve f
 
 This is not a limitation. It's how good teams work. A film crew doesn't have one person operating the camera, writing the script, composing the score, and handling craft services simultaneously. The director doesn't improvise the cinematography. Boundaries are what allow depth.
 
-The crew here is twelve strong. One runs on Opus because architectural decisions deserve more deliberation than everything else. The rest run on Sonnet. The documentation writer runs on Haiku — because writing user guides requires clarity, not compute.
+The crew here is twelve strong. One runs on Codex because architectural decisions deserve more deliberation than everything else. The rest run on Codex. The documentation writer runs on Codex — because writing user guides requires clarity, not compute.
 
 ---
 
@@ -30,7 +30,7 @@ The crew here is twelve strong. One runs on Opus because architectural decisions
 The architect sketches, the designer specifies, then the builder builds. Copy is written before the marketing page exists. Schema is reviewed before migrations run. Reversing this sequence is how you accumulate expensive corrections instead of cheap revisions.
 
 **Humans decide; agents execute.**
-The PRD is read-only. Three layers protect it: a warning block in the document, a rule in CLAUDE.md, and a constraint in every agent's system prompt. The backlog belongs to the humans. Agents are opinionated executors — they push back on bad ideas, flag scope creep, and produce professional work — but they do not set the direction. That's yours.
+The PRD is read-only. Three layers protect it: a warning block in the document, a rule in AGENTS.md, and a constraint in every agent's system prompt. The backlog belongs to the humans. Agents are opinionated executors — they push back on bad ideas, flag scope creep, and produce professional work — but they do not set the direction. That's yours.
 
 **Documentation is not an afterthought.**
 A feature without updated documentation is an incomplete feature. Not 90% done — incomplete. The `docs/` directory is not a graveyard of intentions. It is a living system. Each document has a declared owner. Owners update their documents before marking a task done, not after the next sprint, not "soon."
@@ -75,4 +75,4 @@ The goal was never to produce a scaffold. It was to produce a way of working —
 
 ---
 
-*Read `README.md` for what this template does. Read `CLAUDE.md` for how it works. Read this when you want to understand why.*
+*Read `README.md` for what this template does. Read `AGENTS.md` for how it works. Read this when you want to understand why.*
