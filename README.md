@@ -2,15 +2,19 @@
 
 ![Codex Development Template](./.assets/cover.png)
 
-A bootstrapping template for software projects built with [Codex](https://openai.com/codex/). Use it as a GitHub template, run **`start`**, and Codex walks you through setting up all the documentation before a single line of code is written.
+A clean, orchestration-first starter for teams building with [Codex](https://openai.com/codex/).
 
-This template is also a **Codex plugin** - domain knowledge is encoded as invokable skills, not embedded in agent system prompts. Install it once and the skills are available in any Codex session.
+Use it in two ways:
+- **as a GitHub template** to start a new project with docs, prompts, skills, and structure already in place
+- **as a Codex plugin** to make the included skills available across any Codex session
+
+Run **`start`** after cloning or generating a repo, and Codex guides the setup before implementation begins.
 
 ---
 
 ## Install as a Plugin
 
-To make the domain skills available globally in Codex:
+To make the bundled skills available globally in Codex:
 
 ```bash
 git clone https://github.com/hdtinh57/codex-orchestrated-project-template
